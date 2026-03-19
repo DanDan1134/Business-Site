@@ -48,7 +48,7 @@ export default function Audience() {
           <ScrollReveal key={item.title} delay={i * 0.1}>
             <motion.div
               className="audience-card"
-              whileHover={{ y: -4, borderColor: 'rgba(74, 122, 155, 0.3)' }}
+              whileHover={{ y: -4, borderColor: 'rgba(51, 204, 74, 0.3)' }}
               transition={{ duration: 0.3 }}
             >
               <span className="audience-icon">{item.icon}</span>

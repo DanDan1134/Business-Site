@@ -27,8 +27,8 @@ export default function Hero() {
           <div className="portrait-placeholder">
             <div className="portrait-silhouette">
               <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="100" cy="80" rx="45" ry="50" fill="rgba(74,122,155,0.15)" stroke="rgba(74,122,155,0.3)" strokeWidth="1"/>
-                <path d="M30 280 Q30 180 100 170 Q170 180 170 280" fill="rgba(74,122,155,0.1)" stroke="rgba(74,122,155,0.25)" strokeWidth="1"/>
+                <ellipse cx="100" cy="80" rx="45" ry="50" fill="rgba(51,204,74,0.12)" stroke="rgba(51,204,74,0.25)" strokeWidth="1"/>
+                <path d="M30 280 Q30 180 100 170 Q170 180 170 280" fill="rgba(51,204,74,0.08)" stroke="rgba(51,204,74,0.2)" strokeWidth="1"/>
               </svg>
               <span className="portrait-label">Your Photo Here</span>
             </div>

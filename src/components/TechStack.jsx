@@ -38,7 +38,7 @@ export default function TechStack() {
             <ScrollReveal key={tool.name} delay={0.05 * i}>
               <motion.div
                 className="tech-badge"
-                whileHover={{ scale: 1.05, borderColor: 'rgba(74, 122, 155, 0.4)' }}
+                whileHover={{ scale: 1.05, borderColor: 'rgba(51, 204, 74, 0.4)' }}
                 transition={{ duration: 0.2 }}
               >
                 <span className="tech-name">{tool.name}</span>
@@ -62,7 +62,7 @@ export default function TechStack() {
             <ScrollReveal key={tool.name} delay={0.05 * i}>
               <motion.div
                 className="tech-badge builder"
-                whileHover={{ scale: 1.05, borderColor: 'rgba(74, 122, 155, 0.4)' }}
+                whileHover={{ scale: 1.05, borderColor: 'rgba(51, 204, 74, 0.4)' }}
                 transition={{ duration: 0.2 }}
               >
                 <span className="tech-name">{tool.name}</span>

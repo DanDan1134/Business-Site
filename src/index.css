@@ -7,11 +7,11 @@
   --text-primary: #e8e6ef;
   --text-secondary: #8a8698;
   --text-muted: #5a5666;
-  --text-accent: #6b93b8;
+  --text-accent: #4af060;
 
-  --accent: #4a7a9b;
-  --accent-glow: rgba(74, 122, 155, 0.15);
-  --accent-border: rgba(74, 122, 155, 0.3);
+  --accent: #33cc4a;
+  --accent-glow: rgba(51, 204, 74, 0.12);
+  --accent-border: rgba(51, 204, 74, 0.25);
 
   --border: rgba(255, 255, 255, 0.06);
   --border-light: rgba(255, 255, 255, 0.1);
@@ -19,7 +19,7 @@
   --font-display: 'Outfit', sans-serif;
   --font-mono: 'Space Mono', monospace;
 
-  --glow-subtle: 0 0 40px rgba(74, 122, 155, 0.08);
+  --glow-subtle: 0 0 40px rgba(51, 204, 74, 0.06);
   --glow-card: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
