@@ -1,0 +1,70 @@
+import { motion } from 'framer-motion'
+import ScrollReveal from './ScrollReveal'
+import './Portfolio.css'
+
+const projects = [
+  {
+    title: 'DOORmatic',
+    subtitle: 'The Garage Door Co.',
+    description: 'A professional website for a garage door installation and repair company. Clean layout, service showcases, and lead capture.',
+    url: 'https://doormatic.netlify.app/',
+    tags: ['Business Site', 'Lead Gen', 'Responsive'],
+  },
+  {
+    title: 'Graduate Cleaning Service',
+    subtitle: 'Professional Cleaning',
+    description: 'A polished website for a cleaning service business with booking integration and service area coverage.',
+    url: 'https://www.graduatecleaningservice.com/',
+    tags: ['Service Business', 'Booking', 'SEO'],
+  },
+]
+
+export default function Portfolio() {
+  return (
+    <section className="portfolio" id="portfolio">
+      <ScrollReveal>
+        <span className="section-label">Previous Work</span>
+        <h2 className="section-title">Websites I've built for real businesses</h2>
+      </ScrollReveal>
+
+      <div className="portfolio-grid">
+        {projects.map((project, i) => (
+          <ScrollReveal key={project.title} delay={i * 0.15} direction="up">
+            <motion.a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-card"
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="portfolio-preview">
+                <div className="preview-placeholder">
+                  <span>{project.title}</span>
+                </div>
+              </div>
+              <div className="portfolio-info">
+                <div className="portfolio-header">
+                  <h3>{project.title}</h3>
+                  <span className="portfolio-subtitle">{project.subtitle}</span>
+                </div>
+                <p>{project.description}</p>
+                <div className="portfolio-tags">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="tag">{tag}</span>
+                  ))}
+                </div>
+                <span className="portfolio-link">
+                  Visit Site
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </span>
+              </div>
+            </motion.a>
+          </ScrollReveal>
+        ))}
+      </div>
+    </section>
+  )
+}
