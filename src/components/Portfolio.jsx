@@ -8,14 +8,12 @@ const projects = [
     subtitle: 'The Garage Door Co.',
     description: 'A professional website for a garage door installation and repair company. Clean layout, service showcases, and lead capture.',
     url: 'https://doormatic.netlify.app/',
-    tags: ['Business Site', 'Lead Gen', 'Responsive'],
   },
   {
     title: 'Graduate Cleaning Service',
     subtitle: 'Professional Cleaning',
     description: 'A polished website for a cleaning service business with booking integration and service area coverage.',
     url: 'https://www.graduatecleaningservice.com/',
-    tags: ['Service Business', 'Booking', 'SEO'],
   },
 ]
 
@@ -49,11 +47,6 @@ export default function Portfolio() {
                   <span className="portfolio-subtitle">{project.subtitle}</span>
                 </div>
                 <p>{project.description}</p>
-                <div className="portfolio-tags">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="tag">{tag}</span>
-                  ))}
-                </div>
                 <span className="portfolio-link">
                   Visit Site
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

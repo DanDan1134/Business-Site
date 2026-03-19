@@ -20,6 +20,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  const handleMobileNav = (e, href) => {
+    e.preventDefault()
+    setMenuOpen(false)
+
+    const sectionId = href.replace('#', '')
+    const target = document.getElementById(sectionId)
+
+    if (target) {
+      window.setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 220)
+    }
+  }
+
   return (
     <motion.nav
       className={`navbar ${scrolled ? 'scrolled' : ''}`}
@@ -61,7 +75,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className="nav-link-mobile"
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => handleMobileNav(e, link.href)}
               >
                 {link.label}
               </a>
