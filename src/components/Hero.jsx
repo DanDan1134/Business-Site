@@ -23,17 +23,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: -60, scale: 0.95 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className="portrait-placeholder">
-            <div className="portrait-silhouette">
-              <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="100" cy="80" rx="45" ry="50" fill="rgba(51,204,74,0.12)" stroke="rgba(51,204,74,0.25)" strokeWidth="1"/>
-                <path d="M30 280 Q30 180 100 170 Q170 180 170 280" fill="rgba(51,204,74,0.08)" stroke="rgba(51,204,74,0.2)" strokeWidth="1"/>
-              </svg>
-              <span className="portrait-label">Your Photo Here</span>
-            </div>
-          </div>
-        </motion.div>
+        />
 
         <div className="hero-text">
           <h1 className="brand-name" aria-label={brandName}>
