@@ -6,14 +6,41 @@ import './Contact.css'
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const encodeFormData = (data) =>
+    Object.entries(data)
+      .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+      .join('&')
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
+    setIsSubmitting(true)
+
+    try {
+      const body = encodeFormData({
+        'form-name': 'contact',
+        ...form,
+      })
+
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      })
+
+      setSubmitted(true)
+      setForm({ name: '', email: '', phone: '', message: '' })
+    } catch (error) {
+      console.error('Netlify form submission failed:', error)
+      alert('Something went wrong sending your message. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -39,7 +66,16 @@ export default function Contact() {
             <p>Thanks for reaching out. I'll be in touch soon.</p>
           </motion.div>
         ) : (
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form
+            className="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="name">Name</label>
@@ -92,10 +128,11 @@ export default function Contact() {
             <motion.button
               type="submit"
               className="submit-btn"
+              disabled={isSubmitting}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </motion.button>
           </form>
         )}
