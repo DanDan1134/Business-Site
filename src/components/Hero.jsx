@@ -13,6 +13,7 @@ const letterVariants = {
 export default function Hero() {
   const brandName = 'EZWebsites'
   const tagline = 'Modern websites that convert visitors into customers.'
+  const localFocus = 'Based in Merced, CA, helping local businesses grow online.'
 
   return (
     <section className="hero">
@@ -50,12 +51,21 @@ export default function Hero() {
             {tagline}
           </motion.p>
 
+          <motion.p
+            className="hero-local"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.8, duration: 0.8, ease: 'easeOut' }}
+          >
+            {localFocus}
+          </motion.p>
+
           <motion.a
             href="#contact"
             className="hero-cta"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2, duration: 0.6, ease: 'easeOut' }}
+            transition={{ delay: 2.1, duration: 0.6, ease: 'easeOut' }}
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
           >

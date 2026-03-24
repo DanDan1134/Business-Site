@@ -12,8 +12,9 @@
 .hero-bg-grain {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(51, 204, 74, 0.05) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 30%, rgba(51, 204, 74, 0.03) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 30% 50%, rgba(51, 204, 74, 0.16) 0%, transparent 62%),
+              radial-gradient(ellipse at 72% 28%, rgba(51, 204, 74, 0.1) 0%, transparent 56%),
+              radial-gradient(ellipse at 50% 95%, rgba(22, 120, 38, 0.22) 0%, transparent 68%);
   pointer-events: none;
 }
 
@@ -89,6 +90,13 @@
   font-weight: 300;
   line-height: 1.6;
   max-width: 480px;
+}
+
+.hero-local {
+  font-size: 0.95rem;
+  color: var(--text-accent);
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }
 
 .hero-cta {
