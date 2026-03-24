@@ -24,6 +24,7 @@
   gap: 4rem;
   max-width: 1100px;
   width: 100%;
+  min-width: 0;
   z-index: 1;
 }
 
@@ -68,16 +69,27 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .brand-name {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 6vw, 5rem);
+  /* Scales down on narrow viewports; 3rem min was too wide with letter-spacing */
+  font-size: clamp(1.6rem, calc(5.5vw + 0.85rem), 5rem);
   font-weight: 300;
-  letter-spacing: 12px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-primary);
   line-height: 1.1;
+  max-width: 100%;
+  hyphens: none;
+}
+
+@media (min-width: 769px) {
+  .brand-name {
+    letter-spacing: 12px;
+  }
 }
 
 .brand-letter {
@@ -147,6 +159,10 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 1.25rem 1rem;
+  }
+
   .hero-content {
     flex-direction: column;
     text-align: center;
@@ -160,13 +176,22 @@
 
   .hero-text {
     align-items: center;
+    padding-inline: 0.25rem;
   }
 
   .brand-name {
-    letter-spacing: 6px;
+    font-size: clamp(1.45rem, calc(6.2vw + 0.65rem), 3.25rem);
+    letter-spacing: 0.04em;
   }
 
   .hero-tagline {
     text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand-name {
+    font-size: clamp(1.25rem, calc(5.5vw + 0.5rem), 2.5rem);
+    letter-spacing: 0.02em;
   }
 }
