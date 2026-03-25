@@ -1,25 +1,33 @@
 :root {
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #101018;
-  --bg-card: #14141e;
-  --bg-card-hover: #1a1a28;
+  /* Brand palette */
+  --color-green: #4dab26;
+  --color-blue: #15619e;
+  --color-frost: #dce8f3;
+
+  --bg-primary: #0a1218;
+  --bg-secondary: #101a22;
+  /* Dark surfaces with a hint of #dce8f3 / #15619e */
+  --bg-card: #151d26;
+  --bg-card-hover: #1a2632;
 
   --text-primary: #f8fbff;
-  --text-secondary: #d7e2ea;
-  --text-muted: #afc0ce;
-  --text-accent: #b8ffcb;
+  --text-secondary: rgba(220, 232, 243, 0.88);
+  --text-muted: rgba(220, 232, 243, 0.55);
+  /* Light green for accents on dark (from --color-green) */
+  --text-accent: #a8e89a;
 
-  --accent: #7ff0a1;
-  --accent-glow: rgba(127, 240, 161, 0.2);
-  --accent-border: rgba(184, 255, 203, 0.45);
+  --accent: var(--color-green);
+  --accent-blue: var(--color-blue);
+  --accent-glow: rgba(77, 171, 38, 0.22);
+  --accent-border: rgba(77, 171, 38, 0.42);
 
-  --border: rgba(255, 255, 255, 0.14);
-  --border-light: rgba(255, 255, 255, 0.24);
+  --border: rgba(220, 232, 243, 0.1);
+  --border-light: rgba(220, 232, 243, 0.18);
 
   --font-display: 'Outfit', sans-serif;
   --font-mono: 'Space Mono', monospace;
 
-  --glow-subtle: 0 0 40px rgba(51, 204, 74, 0.06);
+  --glow-subtle: 0 0 40px rgba(21, 97, 158, 0.12);
   --glow-card: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -42,8 +50,8 @@ body {
   background-color: #081017;
   background-image: linear-gradient(
     90.8deg,
-    rgba(14, 32, 42, 1) 2.2%,
-    rgba(62, 118, 90, 1) 84%
+    #0c2038 2.2%,
+    #142a1a 84%
   );
   color: var(--text-primary);
   overflow-x: hidden;
@@ -73,5 +81,5 @@ a {
   transition: color 0.3s ease;
 }
 a:hover {
-  color: var(--text-primary);
+  color: var(--color-frost);
 }

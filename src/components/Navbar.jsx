@@ -42,7 +42,9 @@ export default function Navbar() {
       transition={{ delay: 0.3, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="navbar-inner">
-        <a href="#" className="nav-brand">EZWebsites</a>
+        <a href="#" className="nav-brand">
+          EZWebsites
+        </a>
 
         <div className="nav-links-desktop">
           {links.map((link) => (

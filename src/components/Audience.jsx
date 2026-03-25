@@ -45,10 +45,10 @@ export default function Audience() {
 
       <div className="audience-grid">
         {audiences.map((item, i) => (
-          <ScrollReveal key={item.title} delay={i * 0.1}>
+          <ScrollReveal key={item.title} delay={i * 0.1} className="audience-grid-item">
             <motion.div
               className="audience-card"
-              whileHover={{ y: -4, borderColor: 'rgba(51, 204, 74, 0.3)' }}
+              whileHover={{ y: -4, borderColor: 'rgba(77, 171, 38, 0.35)' }}
               transition={{ duration: 0.3 }}
             >
               <span className="audience-icon">{item.icon}</span>

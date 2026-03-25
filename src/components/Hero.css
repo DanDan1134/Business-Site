@@ -12,88 +12,48 @@
 .hero-bg-grain {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(51, 204, 74, 0.16) 0%, transparent 62%),
-              radial-gradient(ellipse at 72% 28%, rgba(51, 204, 74, 0.1) 0%, transparent 56%),
-              radial-gradient(ellipse at 50% 95%, rgba(22, 120, 38, 0.22) 0%, transparent 68%);
+  background: radial-gradient(ellipse at 30% 50%, rgba(21, 97, 158, 0.2) 0%, transparent 62%),
+              radial-gradient(ellipse at 72% 28%, rgba(77, 171, 38, 0.12) 0%, transparent 56%),
+              radial-gradient(ellipse at 50% 95%, rgba(77, 171, 38, 0.18) 0%, transparent 68%);
   pointer-events: none;
 }
 
 .hero-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  justify-content: center;
+  text-align: center;
+  gap: 1.75rem;
   max-width: 1100px;
   width: 100%;
   min-width: 0;
+  margin: 0 auto;
   z-index: 1;
 }
 
-.hero-portrait {
-  flex-shrink: 0;
+.hero-heading {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
 }
 
-.portrait-placeholder {
-  width: 280px;
-  height: 360px;
-  border-radius: 12px;
-  border: 1px solid var(--border-light);
-  background: var(--bg-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: var(--glow-subtle);
-}
-
-.portrait-silhouette {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.portrait-silhouette svg {
-  width: 120px;
+.hero-logo {
+  display: block;
+  width: min(240px, 52vw);
   height: auto;
-}
-
-.portrait-label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  max-height: 200px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
   min-width: 0;
   max-width: 100%;
-}
-
-.brand-name {
-  font-family: var(--font-display);
-  /* Scales down on narrow viewports; 3rem min was too wide with letter-spacing */
-  font-size: clamp(1.6rem, calc(5.5vw + 0.85rem), 5rem);
-  font-weight: 300;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-primary);
-  line-height: 1.1;
-  max-width: 100%;
-  hyphens: none;
-}
-
-@media (min-width: 769px) {
-  .brand-name {
-    letter-spacing: 12px;
-  }
-}
-
-.brand-letter {
-  display: inline-block;
 }
 
 .hero-tagline {
@@ -102,6 +62,7 @@
   font-weight: 300;
   line-height: 1.6;
   max-width: 480px;
+  text-align: center;
 }
 
 .hero-local {
@@ -109,6 +70,8 @@
   color: var(--text-accent);
   font-weight: 400;
   letter-spacing: 0.2px;
+  text-align: center;
+  max-width: 520px;
 }
 
 .hero-cta {
@@ -164,34 +127,15 @@
   }
 
   .hero-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  .portrait-placeholder {
-    width: 200px;
-    height: 260px;
+  .hero-logo {
+    width: min(200px, 58vw);
+    max-height: 160px;
   }
 
   .hero-text {
-    align-items: center;
     padding-inline: 0.25rem;
-  }
-
-  .brand-name {
-    font-size: clamp(1.45rem, calc(6.2vw + 0.65rem), 3.25rem);
-    letter-spacing: 0.04em;
-  }
-
-  .hero-tagline {
-    text-align: center;
-  }
-}
-
-@media (max-width: 400px) {
-  .brand-name {
-    font-size: clamp(1.25rem, calc(5.5vw + 0.5rem), 2.5rem);
-    letter-spacing: 0.02em;
   }
 }

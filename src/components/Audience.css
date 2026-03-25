@@ -28,9 +28,21 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  align-items: stretch;
+}
+
+.audience-grid-item {
+  display: flex;
+  min-height: 0;
+  min-width: 0;
 }
 
 .audience-card {
+  flex: 1;
+  width: 100%;
+  min-height: 17.5rem;
+  display: flex;
+  flex-direction: column;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -61,6 +73,7 @@
 }
 
 .audience-card p {
+  flex-grow: 1;
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;
@@ -77,6 +90,11 @@
   .audience-grid {
     grid-template-columns: 1fr;
   }
+
+  .audience-card {
+    min-height: 0;
+  }
+
   .audience {
     padding: 5rem 1.5rem;
   }
