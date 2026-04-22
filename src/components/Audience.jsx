@@ -20,7 +20,7 @@ const audiences = [
   },
   {
     title: 'Real Estate',
-    description: 'Property listings, virtual tours, and lead capture that closes deals faster.',
+    description: 'Property listings and lead capture, plus integration with third-party virtual tour tools.',
     icon: '▣',
   },
   {
@@ -30,7 +30,7 @@ const audiences = [
   },
   {
     title: 'E-Commerce',
-    description: 'Full online stores with payment processing, inventory, and a seamless checkout experience.',
+    description: 'Online stores integrated with Stripe or Square payments and third-party inventory/checkout tools.',
     icon: '⬡',
   },
 ]
