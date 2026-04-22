@@ -12,7 +12,7 @@ export default function Hero() {
         <h1 className="hero-heading">
           <motion.img
             className="hero-logo"
-            src="/ezwebsitelogolarge.png"
+            src="/Sleek EZ globe logo design.png"
             alt="EZWebsites"
             decoding="async"
             initial={{ opacity: 0, y: 16, scale: 0.96 }}
